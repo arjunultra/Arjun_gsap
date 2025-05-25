@@ -1,0 +1,97 @@
+<section class="fireworks-header">
+    <!-- Marquee Topbar -->
+    <div id="headerTop" class="fireworks-header-topbar py-2 text-center marquee-left">
+        <i class="bi bi-stars"></i>Diwali sale is open now. Buy early for the best discounts! Happy Diwali...!!!!
+        &nbsp; <i class="bi bi-whatsapp text-success"></i> +91 9999999999
+        &nbsp; <i class="bi bi-telephone text-primary"></i> +91 8888888888, +91 7777777777
+    </div>
+    <!-- Info Bar with Clipped Background -->
+    <div class="fireworks-header-info py-3">
+        <div class="container">
+            <div class="row text-light">
+                <div class="col-lg-4 col-md-12 col-12 mb-2 mb-lg-0 mb-md-0">
+                    <div class="d-flex align-items-center bg-danger rounded-pill py-2 px-4">
+                        <i class="bi bi-geo-alt-fill fireworks-header-info-icon"></i>
+                        <span class="ml-2">123,Demo Building,Demo Colony,Demo Street,Sivakasi.</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 my-md-3 my-lg-0 col-12 mb-2 mb-lg-0 mb-md-0">
+                    <div class="d-flex align-items-center bg-danger rounded-pill py-3 px-4">
+                        <i class="bi bi-clock-fill fireworks-header-info-icon"></i>
+                        <span class="ml-2">Mon-Sat: 9am - 8pm</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="d-flex align-items-center bg-danger rounded-pill px-4 py-3">
+                        <i class="bi bi-envelope-fill fireworks-header-info-icon"></i>
+                        <a href="mailto:support@demotraders.com"
+                            class="ml-2 text-light fireworks-header-email">support@demotraders.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navigation with Animated Rocket -->
+    <nav class="navbar navbar-expand-lg fireworks-header-navbar">
+        <div class="container position-relative">
+            <a class="navbar-brand fireworks-header-brand d-flex align-items-center" href="index.php">
+                <img src="images/logo.webp" alt="logo" title="Demo Traders"
+                    class="img-fluid fireworks-header-logo mr-2">
+                <span class="fireworks-header-brand-text">Demo Traders</span>
+            </a>
+            <button class="navbar-toggler fireworks-header-toggler" type="button" data-toggle="collapse"
+                data-target="#fireworksHeaderNav" aria-controls="fireworksHeaderNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="bi bi-list fireworks-header-toggler-icon"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="fireworksHeaderNav">
+                <ul class="navbar-nav ml-auto fireworks-header-nav">
+                    <li class="nav-item fireworks-header-nav-item">
+                        <a class="nav-link fireworks-header-nav-link <?php if ($page == 'home')
+                            echo 'active'; ?>" href="index.php">
+                            <i class="bi bi-house-door-fill mr-1"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item fireworks-header-nav-item">
+                        <a class="nav-link fireworks-header-nav-link <?php if ($page == 'about')
+                            echo 'active'; ?>" href="about.php">
+                            <i class="bi bi-info-circle-fill mr-1"></i>About Us
+                        </a>
+                    </li>
+                    <li class="nav-item fireworks-header-nav-item">
+                        <a class="nav-link fireworks-header-nav-link <?php if ($page == 'products')
+                            echo 'active'; ?>" href="products.php">
+                            <i class="bi bi-bag-fill"></i>
+                            Products
+                        </a>
+                    </li>
+                    <li class="nav-item fireworks-header-nav-item">
+                        <a class="nav-link fireworks-header-nav-link <?php if ($page == 'safetytips')
+                            echo 'active'; ?>" href="safetytips.php">
+                            <i class="bi bi-shield-lock-fill mr-1"></i>Safety Tips
+                        </a>
+                    </li>
+                    <li class="nav-item fireworks-header-nav-item">
+                        <a class="nav-link fireworks-header-nav-link <?php if ($page == 'contact')
+                            echo 'active'; ?>" href="contact.php">
+                            <i class="bi bi-envelope-open-fill mr-1"></i>Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Rocket Animation Container -->
+            <div id="fireworksHeaderRocket" class="fireworks-header-rocket"></div>
+        </div>
+    </nav>
+</section>
+<script src="js/marquee.js"></script>
+<script>
+    $('.marquee-left').marquee({
+        duration: 16000,
+        gap: 150,
+        delayBeforeStart: 0,
+        direction: 'left',
+        duplicated: false,
+        pauseOnHover: true
+    });
+</script>
