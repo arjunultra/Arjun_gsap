@@ -380,9 +380,9 @@ section.home-carousel .swiper-slide img {
 }
 
 .welcome-section .welcome-section-highlight-word {
-  background: linear-gradient(45deg, var(--yellow), var(--red));
+  /* background: linear-gradient(45deg, var(--yellow), var(--red)) !important; */
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  /* -webkit-text-fill-color: transparent; */
   background-clip: text;
   position: relative;
 }
@@ -397,7 +397,7 @@ section.home-carousel .swiper-slide img {
   background: linear-gradient(45deg, var(--yellow), var(--red));
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.6s ease;
+  /* transition: transform 0.6s ease; */
 }
 
 .welcome-section
