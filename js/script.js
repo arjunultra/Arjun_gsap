@@ -1039,11 +1039,13 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 // index welcome section gsap
 document.addEventListener('DOMContentLoaded', function() {
+    // Check if welcome section exists
+    const welcomeSection = document.querySelector('.welcome-section');
+    if (!welcomeSection) return;
   // Initialize GSAP and ScrollTrigger
   gsap.registerPlugin(ScrollTrigger, SplitText);
   
   // Cache selectors for better performance
-  const welcomeSection = document.querySelector('.welcome-section');
   const title = welcomeSection.querySelector('.welcome-section-title');
   const subtitle = welcomeSection.querySelector('.welcome-section-subtitle-text');
   const description = welcomeSection.querySelector('.welcome-section-description');
@@ -1401,11 +1403,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // index why choose us section gsap
 document.addEventListener('DOMContentLoaded', function() {
+    // Check if the section exists
+    const section = document.querySelector('.index-why-choose');
+    if (!section) return;
   // Register GSAP plugins
   gsap.registerPlugin(SplitText, ScrollTrigger, MotionPathPlugin);
   
   // Cache selectors
-  const section = document.querySelector('.index-why-choose');
   const heading = section.querySelector('.index-why-choose-title');
   const subtitle = section.querySelector('.index-why-choose-subtitle');
   const cards = gsap.utils.toArray('.index-why-choose-card');
@@ -2314,6 +2318,7 @@ document.addEventListener('DOMContentLoaded', function() {
  document.addEventListener('DOMContentLoaded', function() {
     // Get current page URL
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    console.log(`Current page: ${currentPage}`);
     
     // Remove active class from all nav links
     const navLinks = document.querySelectorAll('.fireworks-header-nav-link');
@@ -2324,6 +2329,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const href = link.getAttribute('href');
         if (href === currentPage || (currentPage === '' && href === 'index.html')) {
             link.classList.add('active');
+            console.log(`Active link set for: ${href}`);
         }
     });
 });
